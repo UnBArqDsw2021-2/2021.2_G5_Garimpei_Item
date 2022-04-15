@@ -1,10 +1,10 @@
 from common.models import BaseModel
-from datetime import datetime
-from sqlalchemy import Column, DateTime, Integer, String
+from sqlalchemy import Column, String
 
 
-class ExampleModel(BaseModel):
-    __tablename__ = "example"
+class Item(BaseModel):
+    __tablename__ = "item"
 
     title = Column(String)
-    maia = Column(String)
+    description = Column(String)
+    status = Column(String)
