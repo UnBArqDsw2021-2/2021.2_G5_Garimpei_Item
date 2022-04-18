@@ -7,6 +7,7 @@ from fastapi import status, HTTPException
 def create(request: ItemSchema, db: Session):
     title = request.title
     description = request.description
+    category_id = request.category_id
     status = request.status
 
     item = Item(

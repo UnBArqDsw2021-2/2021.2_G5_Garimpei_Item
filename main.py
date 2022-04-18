@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routers.check import router as check_router
 from routers.item import router as item_router
+from routers.category import router as category_router
 from common.database import engine
 from common.settings import ORIGINS
 
@@ -18,6 +19,7 @@ app.add_middleware(
 )
 
 app.include_router(check_router)
+app.include_router(category_router)
 app.include_router(item_router)
 
 
